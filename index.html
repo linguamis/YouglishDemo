@@ -4,226 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linguamis</title>
+    <link rel="icon" href="icon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        /* --- GENERAL RESET & LAYOUT --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #fff;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* --- TOP NAVIGATION BAR --- */
-        .top-nav {
-            background-color: #111;
-            color: #ccc;
-            padding: 10px 15%;
-            font-size: 13px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .top-nav a:hover {
-            color: #fff;
-        }
-
-        /* --- MAIN CONTENT AREA --- */
-        .main-content {
-            flex: 1; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 50px;
-            padding-bottom: 20px; /* Added slight padding so text doesn't hit footer instantly */
-        }
-
-        /* Gray Search Container */
-        .search-container {
-            background-color: #eeeeee;
-            width: 100%;
-            max-width: 800px;
-            padding: 30px 40px;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        /* Logo Section */
-        .logo-area {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            font-size: 32px;
-            color: #39a0db;
-        }
-        
-        .logo-text {
-            font-size: 28px;
-            font-weight: bold;
-            color: #1a237e;
-        }
-
-        /* Search Input & Button Wrapper */
-        .search-box {
-            display: flex;
-            width: 100%;
-            height: 50px;
-        }
-
-        .search-box input {
-            flex-grow: 1;
-            border: 1px solid #ddd;
-            padding: 0 20px;
-            font-size: 16px;
-            outline: none;
-            color: #555;
-        }
-
-        .search-box input::placeholder {
-            color: #999;
-        }
-
-        .search-btn {
-            background-color: #b71c1c;
-            color: white;
-            border: none;
-            padding: 0 30px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .search-btn:hover {
-            background-color: #a01818;
-        }
-
-        /* The text below the box */
-        .placeholder-text {
-            margin-top: 60px;
-            font-size: 20px;
-            color: #000;
-            max-width: 800px;
-            width: 100%;
-            padding-left: 10px;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #111;
-            color: #bbb;
-            font-size: 11px; /* Slightly smaller font for tighter look */
-            padding: 10px 0; /* Drastically reduced vertical padding */
-        }
-
-        .footer-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-row {
-            padding: 8px 0; /* Reduced row padding */
-            border-bottom: 1px solid #333;
-            line-height: 1.4;
-        }
-
-        .footer-row:last-child {
-            border-bottom: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 8px;
-            padding-bottom: 0;
-        }
-
-        .footer-links a {
-            margin: 0 3px;
-            color: #bbb;
-        }
-        
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        .language-select a {
-            color: #bbb;
-            margin: 0 5px;
-        }
-
-        .highlight-text {
-            color: #666;
-            margin-right: 5px;
-        }
-
-        .social-icons i {
-            font-size: 16px;
-            margin-left: 15px;
-            color: #fff;
-            cursor: pointer;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="top-nav">
-        <a href="#">Last query</a>
-        <a href="#">Login</a>
-        <a href="#">Sign up</a>
+        <div class="content-wrapper nav-inner">
+            <div class="mini-logo-icon">
+                <img src="icon.png" alt="Icon" class="nav-img"> 
+            </div>
+            <a href="#">Last query</a>
+            <a href="#">Login</a>
+            <a href="#">Sign up</a>
+        </div>
     </nav>
 
     <div class="main-content">
         
-        <div class="search-container">
-            <div class="logo-area">
-                <div class="logo-icon">
-                    <i class="fa-solid fa-comments"></i> 
-                    <i class="fa-solid fa-globe" style="color: #66bb6a; margin-left: -10px;"></i>
+        <div class="content-wrapper">
+            <div class="search-container">
+                <div class="logo-area">
+                    <div class="logo-icon">
+                        <img src="logo.png" alt="Linguamis Logo" class="main-logo-img">
+                    </div>
+                    <span class="logo-text">Linguamis</span>
                 </div>
-                <span class="logo-text">Linguamis</span>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search for...">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i> Say it!
+                    </button>
+                </div>
             </div>
 
-            <div class="search-box">
-                <input type="text" placeholder="Search for...">
-                <button class="search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i> Say it!
-                </button>
+            <div class="placeholder-text">
+                <p style="margin: 10px 0;">Welcome, You can search any words to watch related videos!</p>
             </div>
-        </div>
-
-        <div class="placeholder-text">
-            <p style="margin: 10px 0;">Welcome, You can seach videos to learn better!</p>
         </div>
 
     </div>
 
     <footer>
-        <div class="footer-inner">
+        <div class="content-wrapper">
             
-            <div class="footer-row footer-links">
+            <div class="footer-row footer-links footer-languages">
                 <a href="#">Arabic</a> | 
                 <a href="#">Chinese</a> | 
                 <a href="#">Dutch</a> | 
@@ -263,11 +90,12 @@
                 <div class="footer-links">
                     <a href="#">HOME</a> | 
                     <a href="#">ABOUT</a> | 
-                    <a href="#">CONTACT</a> | 
-                </div>
-                <div class="social-icons">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-x-twitter"></i>
+                    <a href="#">CONTACT</a> |
+                    
+                    <span class="social-icons-inline">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </span>
                 </div>
             </div>
 
